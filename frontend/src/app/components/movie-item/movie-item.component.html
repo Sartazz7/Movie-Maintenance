@@ -1,0 +1,28 @@
+<div class="movie">
+  <h3>
+    {{ movie.title }}
+    <div class="voting">
+      <fa-icon
+        [ngStyle]="{ color: 'green' }"
+        [icon]="faThumbsUp"
+        (click)="upvote()"
+      ></fa-icon>
+      <fa-icon
+        [ngStyle]="{ color: 'red' }"
+        [icon]="faThumbsDown"
+        (click)="downvote()"
+      ></fa-icon>
+    </div>
+  </h3>
+  <p>{{ movie.description }}</p>
+  <p>
+    {{
+      "Released on: " +
+        movie.releaseDate +
+        " | Votes: " +
+        movie.votes +
+        " | Actors: " +
+        movie.numActors
+    }}
+  </p>
+</div>

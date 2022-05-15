@@ -1,0 +1,14 @@
+<h2>
+  Movies
+  <app-button
+    color="blue"
+    text="Sort by Title"
+    (btnClick)="sortByTitle()"
+  ></app-button>
+  <app-button
+    color="blue"
+    text="Sort by Release Date"
+    (btnClick)="sortByReleaseDate()"
+  ></app-button>
+</h2>
+<app-movie-item *ngFor="let movie of movies" [movie]="movie"></app-movie-item>
